@@ -54,14 +54,20 @@ nav ul{
 }
 
 #logo{
+	margin: auto;
 	padding-left: 30px;
-	width:200px;
+	width:100px;
+	height:100px;
 }
 
 /*#endregion*/
 
 .homepage-header{
 	background-color: blanchedalmond;
+}
+
+.top-nav{
+	background-color: aquamarine
 }
 
 .cta{
