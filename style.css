@@ -1,0 +1,167 @@
+@font-face{
+	font-family: nimbus;
+	src:url('fonts/nimbus-mono.regular.otf');
+	font-style: normal;
+}
+
+@font-face{
+	font-family: nimbus-bold;
+	src:url('fonts/nimbus-mono.bold.otf');
+	font-style: bold;
+}
+
+*{
+	font-family: nimbus-bold;
+}
+
+/*#region Navigation Bar*/
+.navbar{
+	display:flex;
+	justify-content:stretch;
+	/*align-content: center;*/
+
+}
+nav{
+	margin: auto;
+	/*padding-left: 5%;*/
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5%;
+	/*float:left;*/
+}
+
+nav ul li a{
+	color: black;
+	font-size: large;
+	text-decoration-line: none;
+}
+
+nav ul li a:hover{
+	text-decoration-line: underline;
+}
+
+nav ul{
+	list-style-type: none;
+	text-align: center;
+	/*overflow: hidden;*/
+}
+
+#logo{
+	padding-left: 30px;
+	width:200px;
+}
+
+/*#endregion*/
+
+.homepage-header{
+	background-color: blanchedalmond;
+}
+
+.cta{
+	width: 50%;
+	position: relative;
+	margin: auto;
+	/*padding-left: 5%;*/
+	display: flexbox;
+	align-self: center;
+}
+
+.showcase-section{
+	align-content: center;
+}
+
+.showcase-section h3{
+	text-align: center;
+}
+.showcase-section-buttons{
+	text-align: center;
+	margin: auto;
+	border-spacing: 47%;
+}
+
+.showcase-service-button{
+	width: fit-content;
+}
+
+.showcase-service-button p{
+	width: 50%;
+}
+
+
+/*.showcase-section-buttons td{
+	padding-right: 2%
+}*/
+
+.show-image{
+	margin: auto;
+	position:relative;
+	text-align: center;
+	/*align-content: center;*/
+	width:20%;
+}
+
+.show-image-overlay{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(84, 1, 14, 0.7);
+}
+
+.show-image:hover .show-image-overlay{
+	visibility: visible;
+}
+
+.show-image-overlay p{
+	position: absolute;
+	top: 75%;
+	left: 10%;
+}
+
+.normal-text{
+	font-family: nimbus;
+}
+
+.secondary-text{
+	color:whitesmoke;
+}
+
+footer{
+	background-color: saddlebrown;
+	padding-top: 2%
+}
+
+footer p{
+	color: whitesmoke;
+}
+
+.contact-details{
+	display:flex;
+	flex-flow: row;
+	gap: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
