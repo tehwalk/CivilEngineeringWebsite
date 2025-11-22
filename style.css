@@ -1,39 +1,39 @@
-@font-face{
+@font-face {
 	font-family: nimbus;
-	src:url('fonts/nimbus-mono.regular.otf');
+	src: url("fonts/nimbus-mono.regular.otf");
 	font-style: normal;
 }
 
-@font-face{
+@font-face {
 	font-family: nimbus-bold;
-	src:url('fonts/nimbus-mono.bold.otf');
+	src: url("fonts/nimbus-mono.bold.otf");
 	font-style: bold;
 }
 
-*{
+* {
 	font-family: nimbus-bold;
 }
 
-:root{
+:root {
 	--primary-color: #2626cb;
+	--secondary-text-color: white;
 }
 
 /*#region Navigation Bar*/
-.navbar{
-	display:flex;
-	justify-content:stretch;
+.navbar {
+	display: flex;
+	/*justify-content: stretch;*/
 	/*align-content: center;*/
-
 }
-nav{
-	margin: auto;
+nav {
+	/*margin: auto;*/
 	/*padding-left: 5%;*/
 	width: 100%;
 	justify-content: center;
 	align-items: center;
 }
 
-nav ul li{
+nav ul li {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
@@ -41,40 +41,41 @@ nav ul li{
 	/*float:left;*/
 }
 
-nav ul li a{
+nav ul li a {
 	color: black;
 	font-size: large;
 	text-decoration-line: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
 	text-decoration-line: underline;
 }
 
-nav ul{
+nav ul {
 	list-style-type: none;
 	text-align: center;
 	/*overflow: hidden;*/
 }
 
-#logo{
+#logo {
 	margin: auto;
 	padding-left: 30px;
-	width:100px;
-	height:100px;
+	width: 100px;
+	height: 100px;
 }
 
 /*#endregion*/
 
-.homepage-header{
+.homepage-header {
 	background-color: blanchedalmond;
 }
 
-.top-nav{
-	background-color: var(--primary-color)
+.top-nav {
+	background-color: var(--primary-color);
+	height: fit-content;
 }
 
-.cta{
+.cta {
 	width: 50%;
 	position: relative;
 	margin: auto;
@@ -83,41 +84,40 @@ nav ul{
 	align-self: center;
 }
 
-.showcase-section{
+.showcase-section {
 	align-content: center;
 }
 
-.showcase-section h3{
+.showcase-section h3 {
 	text-align: center;
 }
-.showcase-section-buttons{
+.showcase-section-buttons {
 	text-align: center;
 	margin: auto;
 	border-spacing: 47%;
 }
 
-.showcase-service-button{
+.showcase-service-button {
 	width: fit-content;
 }
 
-.showcase-service-button p{
+.showcase-service-button p {
 	width: 50%;
 }
-
 
 /*.showcase-section-buttons td{
 	padding-right: 2%
 }*/
 
-.show-image{
+.show-image {
 	margin: auto;
-	position:relative;
+	position: relative;
 	text-align: center;
 	/*align-content: center;*/
-	width:20%;
+	width: 20%;
 }
 
-.show-image-overlay{
+.show-image-overlay {
 	visibility: hidden;
 	position: absolute;
 	top: 0;
@@ -127,51 +127,80 @@ nav ul{
 	background-color: rgba(84, 1, 14, 0.7);
 }
 
-.show-image:hover .show-image-overlay{
+.show-image:hover .show-image-overlay {
 	visibility: visible;
 }
 
-.show-image-overlay p{
+.show-image-overlay p {
 	position: absolute;
 	top: 75%;
 	left: 10%;
 }
 
-.normal-text{
+.normal-text {
 	font-family: nimbus;
 }
 
-.secondary-text{
-	color:whitesmoke;
-}
-
-footer{
-	background-color: saddlebrown;
-	padding-top: 2%
-}
-
-footer p{
+.secondary-text {
 	color: whitesmoke;
 }
 
-.contact-details{
-	display:flex;
+footer {
+	height: fit-content;
+	background-color: saddlebrown;
+	padding-top: 2%;
+	text-align: center;
+}
+
+footer p {
+	color: whitesmoke;
+}
+
+
+.contact-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-flow: row;
 	gap: 5%;
 }
 
+.banner {
+	position: relative;
+}
 
+.banner h1 {
+	color: var(--secondary-text-color);
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 45%;
+}
 
+.banner img {
+	width: 100%;
+}
 
+.main {
+	align-self: center;
+}
 
+.services-table {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-spacing: 10px;
+	border-collapse: separate;
+}
 
+.services-table img {
+	margin-top: 5%;
+	width: 15%;
+}
 
-
-
-
-
-
-
-
-
-
+.services-table td {
+	border: 2px solid black;
+	border-radius: 20px;
+	align-self: center;
+}
