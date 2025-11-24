@@ -145,6 +145,8 @@ nav ul {
 	color: whitesmoke;
 }
 
+/*TODO: Fix huge gaps in footer*/
+
 footer {
 	height: fit-content;
 	background-color: saddlebrown;
@@ -186,7 +188,6 @@ footer p {
 }
 
 .services-table {
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -203,4 +204,51 @@ footer p {
 	border: 2px solid black;
 	border-radius: 20px;
 	align-self: center;
+}
+
+.service-segment{
+	align-items: center;
+	justify-content: center;
+}
+
+.service-segment article{
+	align-self: center;
+	/* align-items: center;
+	justify-content: center; */
+	width:50%;
+	height: fit-content;
+}
+
+.service-segment img{
+	float: right;
+	width: 100px;
+	height: 100px;
+}
+
+.contact-area{
+	display:flexbox;
+	align-content: center;
+}
+
+.contact-details{
+	font-family: nimbus;
+	display: block;
+}
+
+.map-container{
+	padding-top: 2%;
+	padding-bottom: 50%;
+	position: relative;
+	height: 100%;
+}
+.map-container iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+
+.contact-form{
+	display: block;
 }
