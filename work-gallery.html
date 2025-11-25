@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <title>Τεχνικό Γραφείο Μαρίας Δάβαρη</title>
@@ -22,11 +23,34 @@
         </div>
     </header>
     <main>
-       <section>
-         <div class="gallery-piece" data-number="0">
-            <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" >
-         </div>
-       </section>
+        <section class="gallery">
+            <div class="gallery-piece" data-number="0">
+                <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="0">
+            </div>
+        </section>
+        <div id="imageModal" class="modal">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-content">
+                <p id="image-index">Εικόνα 6/9</p>
+                <div class="image-container carousel" role="region" aria-label="Image carousel">
+                    <button class="carousel-control" aria-label="Previous" data-direction="start">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                   <img id="carousel-image" src="images/jpg" alt="Building Image"
+                        aria-label="Image carousel">
+                    <button class="carousel-control" aria-label="Next" data-direction="end">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <h2 id="work-title">this fucking idiot, again</h2>
+            </div>
+        </div>
     </main>
     <footer>
         <section class="contact-details">

@@ -206,6 +206,7 @@ footer p {
 	border: 2px solid black;
 	border-radius: 20px;
 	align-self: center;
+	cursor: pointer;
 }
 
 .service-segment{
@@ -254,3 +255,44 @@ footer p {
 .contact-form{
 	display: block;
 }
+
+/*region Work Page Stuff*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow-y: auto;
+	align-content: center;
+}
+
+.close-modal {
+    position: absolute;
+	align-content: center;
+	padding: 1%;
+    right: 25px;
+    top: 10px;
+    color: black;
+	background-color: beige;
+    font-size: 40px;
+    font-weight: normal;
+    cursor: pointer;
+	border-radius: 25px;
+}
+
+.modal-content{
+	position: relative;
+	text-align: center;
+	color: var(--secondary-text-color);
+}
+
+.carousel-control{
+	position: relative;
+	top: 50%;
+}
+
+/*endregion*/
