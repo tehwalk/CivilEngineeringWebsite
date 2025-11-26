@@ -8,7 +8,25 @@ const works = [
     {
         id: 1,
         title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
-        images: ["images/istockphoto-939281438-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+        images: ["images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+
+    },
+    {
+        id: 2,
+        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        images: ["images/istockphoto-2175973016-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+
+    },
+    {
+        id: 3,
+        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        images: ["images/pexels-expect-best-79873-323780.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+
+    },
+    {
+        id: 4,
+        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        images: ["images/pexels-photo-6422939.jpeg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
 
     }
 ];
@@ -50,11 +68,11 @@ function handleButtons(forward) {
     updateCarousel();
 }
 
-function updateCarousel(){
+function updateCarousel() {
     var image = document.getElementById('carousel-image');
     var image_index = document.getElementById('image-index');
     image.src = active_element.images[currentIndex];
-    image_index.innerHTML = "Εικόνα " + (currentIndex+1).toString() + "/" + active_element.images.length.toString();
+    image_index.innerHTML = "Εικόνα " + (currentIndex + 1).toString() + "/" + active_element.images.length.toString();
 }
 
 function closeModal() {

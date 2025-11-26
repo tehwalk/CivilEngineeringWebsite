@@ -25,53 +25,60 @@
 		<div class="cta">
 			<p>Εδω και 35 χρόνια προσφέρουμε υπηρεσίες υψηλής ποιότητας στον χώρο τεχνικών εργασίων, πάντα με συνέπεια
 				και αποτελεσματικότητα</p>
-			<button onclick="window.open('work-gallery.html','_self')">ΤΑ ΕΡΓΑ ΜΑΣ</button>
-			<button onclick="window.open('contact.html','_self')">ΕΠΙΚΟΙΝΩΝΗΣΤΕ</button>
+			<button id="works-button" onclick="window.open('work-gallery.html','_self')">ΤΑ ΕΡΓΑ ΜΑΣ</button>
+			<button id="contact-button" onclick="window.open('contact.html','_self')">ΕΠΙΚΟΙΝΩΝΗΣΤΕ</button>
 		</div>
 	</header>
 	<section class="showcase-section">
 		<h3>Τι κάνουμε</h3>
-		<table class="showcase-section-buttons">
-			<tr>
-				<td class="showcase-service-button">
-					<p>PEA</p>
-					<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-				</td>
-				<td class="showcase-service-button">
-					<p>ΑΔΕΙΕΣ</p>
-					<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-				</td>
-				<td class="showcase-service-button">
-					<p>PEA</p>
-					<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-				</td>
-			</tr>
-		</table>
+		<div class="showcase-container">
+			<table class="services-table">
+				<tr>
+					<td>
+						<img src="images/jpg">
+						<p>PEA</p>
+						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+					</td>
+					<td>
+						<img src="images/jpg">
+						<p>ΑΔΕΙΕΣ</p>
+						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+					</td>
+					<td>
+						<img src="images/jpg">
+						<p>PEA</p>
+						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</section>
-	<section class="showcase-section">
+	<section class="showcase-section works">
 		<h3>Μερικά από τα έργα μας</h3>
-		<table class="showcase-section-buttons">
-			<tr>
-				<td class="show-image">
-					<img src="images/istockphoto-2175973016-612x612.jpg">
-					<div class="show-image-overlay">
-						<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-					</div>
-				</td>
-				<td class="show-image">
-					<img src="images/istockphoto-2175973016-612x612.jpg">
-					<div class="show-image-overlay">
-						<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-					</div>
-				</td>
-				<td class="show-image">
-					<img src="images/istockphoto-2175973016-612x612.jpg">
-					<div class="show-image-overlay">
-						<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-					</div>
-				</td>
-			</tr>
-		</table>
+		<div class="showcase-container">
+			<table class="showcase-section-buttons">
+				<tr>
+					<td class="show-image">
+						<img src="images/istockphoto-2175973016-612x612.jpg">
+						<div class="show-image-overlay">
+							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+						</div>
+					</td>
+					<td class="show-image">
+						<img src="images/istockphoto-2175973016-612x612.jpg">
+						<div class="show-image-overlay">
+							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+						</div>
+					</td>
+					<td class="show-image">
+						<img src="images/istockphoto-2175973016-612x612.jpg">
+						<div class="show-image-overlay">
+							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</section>
 	<!--TODO: When done, insert this footer onto every page-->
 	<footer>
