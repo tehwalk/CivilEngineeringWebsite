@@ -27,13 +27,16 @@
             <div class="gallery-piece" data-number="0">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="0">
             </div>
+            <div class="gallery-piece" data-number="1">
+                <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="0">
+            </div>
         </section>
         <div id="imageModal" class="modal">
             <button class="close-modal" onclick="closeModal()">&times;</button>
             <div class="modal-content">
                 <p id="image-index">Εικόνα 6/9</p>
                 <div class="image-container carousel" role="region" aria-label="Image carousel">
-                    <button class="carousel-control" aria-label="Previous" data-direction="start">
+                    <button class="carousel-control" aria-label="Previous" data-direction="start" onclick="handleButtons(false)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -41,7 +44,7 @@
                     </button>
                    <img id="carousel-image" src="images/jpg" alt="Building Image"
                         aria-label="Image carousel">
-                    <button class="carousel-control" aria-label="Next" data-direction="end">
+                    <button class="carousel-control" aria-label="Next" data-direction="end" onclick="handleButtons(true)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <polyline points="9 18 15 12 9 6"></polyline>
