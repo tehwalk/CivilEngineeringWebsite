@@ -23,7 +23,8 @@ const service_content = [
 
 function show_service() {
     const title = document.getElementById('service-title');
-    const description = document.getElementById('service-article');
+    const description = document.getElementById('service-text');
+    //TODO: Add image parameters
     let params = new URLSearchParams(location.search);
     let id = params.get('id')
     service_content.forEach(element => {
