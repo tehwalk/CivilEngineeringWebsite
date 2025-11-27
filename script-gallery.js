@@ -13,19 +13,19 @@ const works = [
     },
     {
         id: 2,
-        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        title: "Ανέγερση διπλοκατοικίας στην Ηλιούπολη",
         images: ["images/istockphoto-2175973016-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
 
     },
     {
         id: 3,
-        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        title: "Ανακαίνιση μονοκατοικίας στην Κηφισιά",
         images: ["images/pexels-expect-best-79873-323780.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
 
     },
     {
         id: 4,
-        title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
+        title: "Επέκταση μονοκατοικίας στο Κορωπί",
         images: ["images/pexels-photo-6422939.jpeg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
 
     }
@@ -41,7 +41,9 @@ function load_images() {
         var element = works[parseInt(item.dataset.number)];
         var image = item.children[0]; ///make sure the first chlid element of the div is the image!!!
         image.src = element.images[0];
+        var overlay_text = item.querySelector('.show-image-overlay p');
         item.style.cursor = 'pointer';
+        overlay_text.innerHTML = element.title;
         item.onclick = function () {
             openModal(item.dataset.number);
         };

@@ -32,30 +32,26 @@
 	<section class="showcase-section">
 		<h3>Τι κάνουμε</h3>
 		<div class="showcase-container">
-			<table class="services-table">
-				<tr>
-					<td>
-						<img src="images/jpg">
-						<p>PEA</p>
-						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-					</td>
-					<td>
-						<img src="images/jpg">
-						<p>ΑΔΕΙΕΣ</p>
-						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-					</td>
-					<td>
-						<img src="images/jpg">
-						<p>PEA</p>
-						<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<button class="more-button">
+			<div class="service-button">
+				<img src="images/icon-placholder.png">
+				<p>PEA</p>
+				<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+			</div>
+			<div class="service-button">
+				<img src="images/icon-placholder.png">
+				<p>ΑΔΕΙΕΣ</p>
+				<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+			</div>
+			<div class="service-button">
+				<img src="images/icon-placholder.png">
+				<p>PEA</p>
+				<p class="normal-text">Το γραφειο μας εκδίδει πιστοποιητικά</p>
+			</div>
+		</div class="service-button">
+		<button class="more-button" onclick="window.open('services.html','_self')">
 			<p>περισσότερα</p>
 			<svg width="72" height="12" viewBox="0 0 72 12" fill="none" stroke="currentColor" strokeWidth="2">
-				<line x1="6" y1="4" x2="72" y2="4" stroke="currentColor" strokeWidth="2"/>
+				<line x1="6" y1="4" x2="72" y2="4" stroke="currentColor" strokeWidth="2" />
 				<polyline points="64 8, 72 4, 64 0"></polyline>
 			</svg>
 		</button>
@@ -63,33 +59,29 @@
 	<section class="showcase-section works">
 		<h3>Μερικά από τα έργα μας</h3>
 		<div class="showcase-container">
-			<table class="showcase-section-buttons">
-				<tr>
-					<td class="show-image">
-						<img src="images/istockphoto-2175973016-612x612.jpg">
-						<div class="show-image-overlay">
-							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-						</div>
-					</td>
-					<td class="show-image">
-						<img src="images/istockphoto-2175973016-612x612.jpg">
-						<div class="show-image-overlay">
-							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-						</div>
-					</td>
-					<td class="show-image">
-						<img src="images/istockphoto-2175973016-612x612.jpg">
-						<div class="show-image-overlay">
-							<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
-						</div>
-					</td>
-				</tr>
-			</table>
+			<div class="gallery-piece">
+				<img src="images/istockphoto-2175973016-612x612.jpg">
+				<div class="show-image-overlay">
+					<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+				</div>
+			</div>
+			<div class="gallery-piece">
+				<img src="images/istockphoto-2175973016-612x612.jpg">
+				<div class="show-image-overlay">
+					<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+				</div>
+			</div>
+			<div class="gallery-piece">
+				<img src="images/istockphoto-2175973016-612x612.jpg">
+				<div class="show-image-overlay">
+					<p class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</p>
+				</div>
+			</div>
 		</div>
-		<button class="more-button">
+		<button class="more-button" onclick="window.open('work-gallery.html','_self')">
 			<p>περισσότερα</p>
-			<svg width="72" height="12" viewBox="0 0 72 12" fill="none" stroke="currentColor" strokeWidth="2">
-				<line x1="6" y1="4" x2="72" y2="4" stroke="currentColor" strokeWidth="2"/>
+			<svg width="72" height="12" viewBox="0 0 72 12" fill="none" stroke="white" strokeWidth="2">
+				<line x1="6" y1="4" x2="72" y2="4" stroke="white" strokeWidth="2" />
 				<polyline points="64 8, 72 4, 64 0"></polyline>
 			</svg>
 		</button>
@@ -97,16 +89,14 @@
 	<!--TODO: When done, insert this footer onto every page-->
 	<footer>
 		<section class="footer-info-section">
-			<section class="footer-logo">
-				<img src="images/jpg" id="logo">
-			</section>
+			<img src="images/jpg" id="logo">
 			<section class="footer-useful-links">
 				<article class="footer-cd">
 					<p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>
 					<p>ΤΗΛ. 2106020833</p>
 					<p>mdav2404@gmail.com</p>
 				</article>
-				<article class="navbar">
+				<article class="navbar footer">
 					<nav>
 						<ul>
 							<li><a class="secondary-text" href="">ΑΡΧΙΚΗ</a></li>
@@ -116,14 +106,14 @@
 						</ul>
 					</nav>
 				</article>
-				<article class="policy-links">
+				<!-- <article class="policy-links">
 					<nav>
 						<ul>
 							<li><a>Πολιτική απορρήτου</a></li>
 							<li><a>Πολιτική cookies</a></li>
 						</ul>
 					</nav>
-				</article>
+				</article> -->
 			</section>
 		</section>
 		<p id="copyright">Copyright 2025 - All rights reserved</p>
