@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="navbar top-nav">
-            <img src="images/jpg" id="logo" />
+            <img src="images/scale-pencil_12423256.png" id="logo" />
             <nav>
                 <ul>
                     <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
@@ -60,14 +60,13 @@
             </div>
         </section>
         <div id="imageModal" class="modal">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
             <div class="modal-content">
                 <p id="image-index">Εικόνα 6/9</p>
                 <div class="carousel" role="region" aria-label="Image carousel">
                     <button class="carousel-control" aria-label="Previous" data-direction="start"
                         onclick="handleButtons(false)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
+                            stroke-width="3">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
                     </button>
@@ -75,41 +74,49 @@
                     <button class="carousel-control" aria-label="Next" data-direction="end"
                         onclick="handleButtons(true)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
+                            stroke-width="3">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </button>
                 </div>
                 <h2 id="work-title">placeholder text</h2>
             </div>
+             <button class="close-modal" onclick="closeModal()"><p>&times;</p></button>
         </div>
     </main>
-    <footer>
-        <section class="footer-cd">
-            <p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>
-            <p>ΤΗΛ. 2106020833</p>
-            <p>mdav2404@gmail.com</p>
-        </section>
-        <section class="navbar">
-            <nav>
-                <ul>
-                    <li><a class="secondary-text" href="">ΑΡΧΙΚΗ</a></li>
-                    <li><a class="secondary-text" href="">ΕΡΓΑ</a></li>
-                    <li><a class="secondary-text" href="">ΥΠΗΡΕΣΙΕΣ</a></li>
-                    <li><a class="secondary-text" href="">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section>
-            <nav>
-                <ul>
-                    <li><a>Πολιτική απορρήτου</a></li>
-                    <li><a>Πολιτική cookies</a></li>
-                </ul>
-            </nav>
-        </section>
-        <p id="copyright">Copyright 2025 - All rights reserved</p>
-    </footer>
+ 	<footer>
+		<section class="footer-info-section">
+			<section class="footer-logo-container">
+				<img src="images/scale-pencil_12423256.png" id="logo">
+			</section>
+			<section class="footer-useful-links">
+				<article class="footer-cd">
+					<p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>
+					<p>ΤΗΛ. 2106020833</p>
+					<p>mdav2404@gmail.com</p>
+				</article>
+				<article class="navbar footer">
+					<nav>
+						<ul>
+							<li><a class="secondary-text" href="">ΑΡΧΙΚΗ</a></li>
+							<li><a class="secondary-text" href="">ΕΡΓΑ</a></li>
+							<li><a class="secondary-text" href="">ΥΠΗΡΕΣΙΕΣ</a></li>
+							<li><a class="secondary-text" href="">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+						</ul>
+					</nav>
+				</article>
+				<!-- <article class="policy-links">
+					<nav>
+						<ul>
+							<li><a>Πολιτική απορρήτου</a></li>
+							<li><a>Πολιτική cookies</a></li>
+						</ul>
+					</nav>
+				</article> -->
+			</section>
+		</section>
+		<p id="copyright">Copyright 2025 - All rights reserved</p>
+	</footer>
 </body>
 
 </html>
