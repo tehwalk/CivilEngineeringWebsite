@@ -11,6 +11,18 @@
 	font-style: bold;
 }
 
+@font-face {
+	font-family: sansation-italic;
+	src: url("fonts/sansation.italic.ttf");
+	font-style: italic;
+}
+
+@font-face {
+	font-family: sansation-bold-italic;
+	src: url("fonts/sansation.bold-italic.ttf");
+	font-style: bold italic;
+}
+
 * {
 	font-family: sansation-bold;
 }
@@ -49,6 +61,20 @@ body{
 	height: fit-content;
 }
 
+.logo-container{
+	margin-left: 5%;
+	display: flex;
+	flex-wrap: row;
+	align-items: center;
+	justify-content: center;
+	/*width: 65%;*/
+}
+
+.logo-container p{
+	font-family: sansation-bold-italic;
+	color: var(--secondary-text-color);
+}
+
 
 nav{
 	display: flex;
@@ -66,8 +92,6 @@ nav ul {
 	/*overflow: hidden;*/
 }
 
-
-
 nav ul li {
 	margin-left: auto;
 	margin-right: auto;
@@ -84,10 +108,10 @@ nav ul li a:hover {
 }
 
 #logo {
-	background-color: var(--secondary-text-color);
-	width: 100px;
+	width: 266px;
 	height: 100px;
 	justify-self: center;
+	margin-bottom: 1%;
 }
 
 /*#endregion*/
