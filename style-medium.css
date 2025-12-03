@@ -1,0 +1,35 @@
+@media screen and (max-width:1500px) {
+
+	/*#region Navigation Stuff*/
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		gap: 10%;
+		justify-content: flex-start;
+		align-items: center;
+		height: fit-content;
+	}
+
+	.logo-container {
+		margin-left: 5%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		gap: 10%;
+	}
+
+	/*#endregion*/
+
+	/*#region Footer Stuff*/
+	.footer-logo-container {
+		display: flex;
+		margin-left: 5%;
+		position: relative;
+	}
+
+	/*#endregion*/
+}
