@@ -1,7 +1,132 @@
-@media screen and (max-width:600px){
-	nav ul{
-		display: flex;
+@media screen and (max-width:900px) {
+
+	/*#region Navigation Stuff*/
+	.nav-row-container {
+		display: none;
+		/* 	display: flex;
 		flex-direction: row;
+		gap: 5%; */
+	}
+
+	.logo-container {
+		margin-left: 0;
+		align-self: center;
+	}
+
+	/*#endregion*/
+
+	/*#region Home Header Stuff*/
+	.homepage-header img {
+		object-position: left 90%;
+	}
+
+	.homepage-header-content {
+		align-content: center;
+	}
+
+	.cta {
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 20%;
+	}
+
+	/*#endregion*/
+
+	/*#region Contact Page Stuff*/
+
+	.contact-area {
+		flex-direction: column;
+	}
+
+	/*#endregion*/
+
+	/*#region Hamburger Modal Stuff*/
+
+	.hamburger {
+		display: block;
+		margin-left: 2%;
+	}
+
+	.hamburger img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.navbar#column-nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--secondary-color);
+		overflow-y: auto;
+		align-content: center;
+	}
+
+	.nav-column-container {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		align-content: stretch;
+		justify-content: center;
 		gap: 5%;
 	}
+
+	.nav-column-container ul {
+		margin-left: 0;
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		gap: 20%;
+
+	}
+
+	.nav-column-container .logo-container {
+		align-self: center;
+	}
+
+	/*#endregion*/
+
+	/*#region Footer Stuff*/
+
+	.footer-info-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		/*text-align: center;*/
+	}
+
+	.navbar.footer nav {
+		height: 100%;
+	}
+
+	.navbar.footer ul {
+		/* padding-left: 0; */
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		gap: 40%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer-cd {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 11%;
+		margin-bottom: 2%;
+	}
+
+	/*#endregion*/
 }

@@ -16,10 +16,10 @@
 		flex-direction: row;
 	}
 
-	nav ul {
+	.nav-row-container ul {
 		display: flex;
 		flex-direction: row;
-		gap: 10%;
+		gap: 5%;
 	}
 
 	/*#endregion*/
@@ -29,6 +29,24 @@
 		display: flex;
 		margin-left: 5%;
 		position: relative;
+	}
+
+	.navbar.footer ul {
+		display: flex;
+		flex-direction: row;
+		gap: 20%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer-cd {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: row;
+		gap: 5%;
+		margin-bottom: 2%;
 	}
 
 	/*#endregion*/

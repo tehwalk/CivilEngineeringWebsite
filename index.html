@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="style-medium.css">
 	<link rel="stylesheet" href="style-small.css">
-	<script></script>
+	<script src="script-hamburger-menu.js"></script>
 </head>
 
 <body>
@@ -17,6 +17,33 @@
 		<img src="images/home-banner-2.png">
 		<div class="homepage-header-content">
 			<div class="navbar top-nav">
+				<div class="hamburger" onclick="openModal()">
+					<img src="images/more_6015685.png">
+				</div>
+				<div class="logo-container">
+					<img src="images/ce_logo.png" id="logo" />
+					<!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
+				</div>
+				<nav class="nav-row-container">
+					<ul>
+						<li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+						<li><a href="work-gallery.html">ΕΡΓΑ</a></li>
+						<li><a href="services.html">ΥΠΗΡΕΣΙΕΣ</a></li>
+						<li><a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="cta">
+				<p>Εδω και 35 χρόνια προσφέρουμε υπηρεσίες υψηλής ποιότητας στον χώρο τεχνικών εργασίων, πάντα με
+					συνέπεια
+					και αποτελεσματικότητα</p>
+				<button id="works-button" onclick="location.href='work-gallery.html'">ΤΑ ΕΡΓΑ ΜΑΣ</button>
+				<button id="contact-button" onclick="location.href='contact.html'">ΕΠΙΚΟΙΝΩΝΗΣΤΕ</button>
+			</div>
+		</div>
+		<!--This will appear only on mobile screens-->
+		<div class="navbar" id="column-nav">
+			<div class="nav-column-container">
 				<div class="logo-container">
 					<img src="images/ce_logo.png" id="logo" />
 					<!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
@@ -30,61 +57,56 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="cta">
-				<p>Εδω και 35 χρόνια προσφέρουμε υπηρεσίες υψηλής ποιότητας στον χώρο τεχνικών εργασίων, πάντα με
-					συνέπεια
-					και αποτελεσματικότητα</p>
-				<button id="works-button" onclick="window.open('work-gallery.html','_self')">ΤΑ ΕΡΓΑ ΜΑΣ</button>
-				<button id="contact-button" onclick="window.open('contact.html','_self')">ΕΠΙΚΟΙΝΩΝΗΣΤΕ</button>
-			</div>
+			<button class="close-modal" onclick="closeModal()">
+				<p>X</p>
+			</button>
 		</div>
 	</header>
-	<section class="showcase-section">
+	<main class="showcase-section">
 		<h1>Παρεχόμενες υπηρεσίες</h1>
-		<div class="showcase-container">
-			<div class="service-button" onclick="window.open('services/service-description.html?id=0', '_self')">
+		<section class="showcase-container">
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Οικοδομικές άδειες - Άδειες μικρής κλίμακας</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=1', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Τοπογραφικά διαγράμματα</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Δήλωση αυθαιρέτων</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Έκδοση ΠΕΑ</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Ηλεκτρονική ταυτότητα κτιρίου</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Πραγματογνωμοσύνες</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Άδειες λειτουργίας</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Επίβλεψη τεχνικών έργων</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Κτηματολόγιο</p>
-			</div>
-			<div class="service-button" onclick="window.open('services/service-description.html?id=2', '_self')">
+			</a>
+			<a class="service-button" href="services/service-description.html">
 				<img src="images/icon-placholder.png">
 				<p>Ανακαινίσεις - Επισκευές</p>
-			</div>
-		</div>
-	</section>
-	<!--TODO: When done, insert this footer onto every page-->
+			</a>
+		</section>
+	</main>
 	<footer>
 		<section class="footer-info-section">
 			<div class="logo-container">
@@ -100,10 +122,10 @@
 				<article class="navbar footer">
 					<nav>
 						<ul>
-							<li><a class="secondary-text" href="">ΑΡΧΙΚΗ</a></li>
-							<li><a class="secondary-text" href="">ΕΡΓΑ</a></li>
-							<li><a class="secondary-text" href="">ΥΠΗΡΕΣΙΕΣ</a></li>
-							<li><a class="secondary-text" href="">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+							<li><a href="">ΑΡΧΙΚΗ</a></li>
+							<li><a href="">ΕΡΓΑ</a></li>
+							<li><a href="">ΥΠΗΡΕΣΙΕΣ</a></li>
+							<li><a href="">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
 						</ul>
 					</nav>
 				</article>
@@ -120,5 +142,5 @@
 		<p id="copyright">Copyright 2025 - All rights reserved</p>
 	</footer>
 </body>
-
+<!--TODO: When done, copy navbar and footer stuff into the other pages-->
 </html>
