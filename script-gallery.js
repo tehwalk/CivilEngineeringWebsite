@@ -31,8 +31,11 @@ const works = [
     }
 ];
 // this is the element of the works array that is visible when the modal is active, and null when the modal is inactive
-var active_element = null;
-var currentIndex = 0;
+let active_element = null;
+let currentIndex = 0;
+let startX = 0;
+let endX = 0;
+let isDragging = false;
 
 function load_images() {
     gallery_items = document.getElementsByClassName('gallery-piece');
@@ -52,12 +55,71 @@ function load_images() {
 }
 
 function openModal(number) {
-    document.getElementById('imageModal').style.display = 'block';
-    var work_title = document.getElementById('work-title');
+    const imageModal = document.getElementById('imageModal');
+    imageModal.style.display = 'block';
+    const work_title = document.getElementById('work-title');
+    const buttonPrevious = document.querySelector('.carousel-control.left');
+    const buttonNext = document.querySelector('.carousel-control.right');
     active_element = works[parseInt(number)];
     work_title.innerHTML = active_element.title;
+    //reset carousel index
     currentIndex = 0;
+    //reset touch variables
+    startX = 0;
+    endX = 0;
     updateCarousel();
+
+    buttonPrevious.addEventListener('click', (e) => {
+        
+        handleButtons(false);
+        isDragging = false;
+    });
+
+    buttonNext.addEventListener('click', (e) => {
+        
+        handleButtons(true);
+        isDragging = false;
+
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'ArrowLeft') {
+            handleButtons(false);
+        }
+        else if (e.code === 'ArrowRight') {
+            handleButtons(true);
+        }
+    });
+    //FIXME: Buttons get pressed twice when on touchscreen, why?
+
+    imageModal.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    imageModal.addEventListener('touchmove', (e) => {
+        if (isDragging) endX = e.touches[0].clientX;
+    });
+
+    imageModal.addEventListener('touchend', (e) => {
+        if (isDragging) {
+            handleSwipe(e);
+            isDragging = false;
+        }
+    });
+}
+
+function handleSwipe(e) {
+    const swipeThreshold = 200;
+
+    if (Math.abs(endX - startX) > swipeThreshold) {
+        if (endX < startX) {
+            handleButtons(true);
+        } else {
+            handleButtons(false);
+        }
+        updateCarousel();
+    }
 }
 
 function handleButtons(forward) {
@@ -71,15 +133,18 @@ function handleButtons(forward) {
 }
 
 function updateCarousel() {
-    var image = document.getElementById('carousel-image');
-    var image_index = document.getElementById('image-index');
+    const image = document.getElementById('carousel-image');
+    const image_index = document.getElementById('image-index');
     image.src = active_element.images[currentIndex];
     image_index.innerHTML = "Εικόνα " + (currentIndex + 1).toString() + "/" + active_element.images.length.toString();
+    startX = 0;
+    endX = 0;
 }
 
 function closeModal() {
     active_element = null;
     document.getElementById('imageModal').style.display = 'none';
+    //document.removeEventListener('keydown');
 }
 
 document.addEventListener('DOMContentLoaded', load_images)

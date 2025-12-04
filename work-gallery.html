@@ -6,7 +6,7 @@
     <title>Έργα - Τεχνικό Γραφείο Μαρίας Δάβαρη</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-medium.css">
-	<link rel="stylesheet" href="style-small.css">
+    <link rel="stylesheet" href="style-small.css">
     <script src="script-gallery.js"></script>
 </head>
 
@@ -28,75 +28,67 @@
         </div>
     </header>
     <main>
-        <section class="banner">
+        <section class="banner" aria-readonly="true">
             <img src="images/works-banner.png">
             <h1>ΤΑ ΕΡΓΑ ΜΑΣ</h1>
         </section>
         <section class="gallery">
-            <article class="gallery-piece" data-number="0" tabindex="0">
+            <button class="gallery-piece" data-number="0">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="0">
                 <div class="show-image-overlay">
                     <h2 class="secondary-text">Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</h2>
                 </div>
-            </article>
-            <article class="gallery-piece" data-number="1" tabindex="0">
+            </button>
+            <button class="gallery-piece" data-number="1">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="1">
                 <div class="show-image-overlay">
                     <h2>Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</h2>
                 </div>
-            </article>
-            <article class="gallery-piece" data-number="2" tabindex="0">
+            </button>
+            <button class="gallery-piece" data-number="2">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="2">
                 <div class="show-image-overlay">
                     <h2>Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</h2>
                 </div>
-            </article>
-            <article class="gallery-piece" data-number="3" tabindex="0">
+            </button>
+            <button class="gallery-piece" data-number="3">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="3">
                 <div class="show-image-overlay">
                     <h2>Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</h2>
                 </div>
-            </article>
-            <article class="gallery-piece" data-number="4" tabindex="0">
+            </button>
+            <button class="gallery-piece" data-number="4">
                 <img src="images/4965590_stock-photo-big-house-exterior-in-blue-color-with-red-trim.jpg" data-id="4">
                 <div class="show-image-overlay">
                     <h2>Ανακαίνιση μεζονέτας στο κέντρο της ΑΘήνας</h2>
                 </div>
-            </article>
+            </button>
         </section>
         <div id="imageModal" class="modal">
             <div class="modal-content">
+                <button class="close-modal" onclick="closeModal()">
+                    <p>X</p>
+                </button>
                 <p id="image-index">Εικόνα 6/9</p>
                 <div class="carousel" role="region" aria-label="Image carousel">
-                    <button class="carousel-control left" aria-label="Previous" data-direction="start"
-                        onclick="handleButtons(false)">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
+                    <button class="carousel-control left" aria-label="Previous" data-direction="start">
+                        <img src="images/carousel-arrow.svg">
                     </button>
                     <img id="carousel-image" src="images/jpg" alt="Building Image" aria-label="Image carousel">
-                    <button class="carousel-control right" aria-label="Next" data-direction="end"
-                        onclick="handleButtons(true)">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                    <button class="carousel-control right" aria-label="Next" data-direction="end">
+                        <img src="images/carousel-arrow.svg">
                     </button>
                 </div>
                 <h2 id="work-title">placeholder text</h2>
             </div>
-            <button class="close-modal" onclick="closeModal()">
-                <p>X</p>
-            </button>
         </div>
     </main>
     <footer>
         <section class="footer-info-section">
             <div class="logo-container">
-				<img src="images/ce_logo.png" id="logo" />
-				<!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
-			</div>
+                <img src="images/ce_logo.png" id="logo" />
+                <!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
+            </div>
             <section class="footer-useful-links">
                 <article class="footer-cd">
                     <p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>

@@ -8,6 +8,13 @@
 		gap: 5%; */
 	}
 
+	.navbar.top-nav{
+		justify-content: flex-start;
+		align-items: center;
+		gap: 25%;
+		/*FIXME: Lgo and hamburger gapping*/
+	}
+
 	.logo-container {
 		margin-left: 0;
 		align-self: center;
@@ -64,6 +71,7 @@
 		background-color: var(--secondary-color);
 		overflow-y: auto;
 		align-content: center;
+		transition: display 2s;
 	}
 
 	.nav-column-container {
@@ -92,6 +100,23 @@
 		align-self: center;
 	}
 
+	.close-column-nav {
+		position: absolute;
+		padding: 1%;
+		right: 20%;
+		top: 20%;
+		color: var(--secondary-text-color);
+		border: 0;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.close-column-nav p {
+		font-size: 32px;
+		margin: 0;
+		align-self: center;
+	}
+
 	/*#endregion*/
 
 	/*#region Footer Stuff*/
@@ -104,19 +129,26 @@
 		/*text-align: center;*/
 	}
 
-	.navbar.footer nav {
-		height: 100%;
+	.navbar.footer{
+		align-content: stretch;
 	}
+
+	/* .navbar.footer nav {
+		display: flex;
+		height: 100%;
+	} */
 
 	.navbar.footer ul {
 		/* padding-left: 0; */
+		margin: 0;
 		display: flex;
 		height: 100%;
 		flex-direction: column;
-		gap: 40%;
+		gap: 4vh;
 		text-align: center;
 		justify-content: center;
 		align-items: center;
+		align-content: center;
 	}
 
 	.footer-cd {
@@ -126,6 +158,28 @@
 		flex-direction: column;
 		gap: 11%;
 		margin-bottom: 2%;
+	}
+
+	/*#endregion*/
+
+
+}
+
+@media screen and (max-width:1000px) {
+
+	/*#region Service Description Stuff*/
+	.service-article {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.service-article img {
+		margin-left: 1%;
+		margin-bottom: 1%;
+		max-width: 200px;
+		max-height: 200px;
 	}
 
 	/*#endregion*/
