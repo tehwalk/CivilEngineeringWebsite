@@ -222,13 +222,22 @@ nav ul li a:hover {
 	background-color: var(--dark-primary-color-semi-transparent);
 }
 
-.show-image:hover .show-image-overlay {
+.gallery-piece:hover .show-image-overlay {
 	visibility: visible;
 }
 
-.show-image-overlay p {
+.gallery-piece:focus-visible .show-image-overlay {
+	visibility: visible;
+}
+
+.gallery-piece:active .show-image-overlay {
+	visibility: visible;
+}
+
+.show-image-overlay h2 {
+	font-size: 22px;
 	position: absolute;
-	top: 75%;
+	top: 65%;
 	left: 3%;
 }
 
@@ -327,6 +336,20 @@ footer a{
 	flex-flow: row;
 	gap: 11%;
 	margin-bottom: 2%;
+}
+.footer-cd div{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	text-align: center;
+	justify-content: stretch;
+	align-items: center;
+	width: max-content;
+}
+
+.footer-cd div img{
+	width: 30px;
+	height: 30px;
 }
 
 #copyright{

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Τεχνικό Γραφείο Μαρίας Δάβαρη</title>
+    <title>Επικοινωνία - Τεχνικό Γραφείο Μαρίας Δάβαρη</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-medium.css">
-	<link rel="stylesheet" href="style-small.css">
+    <link rel="stylesheet" href="style-small.css">
 </head>
 
 <body>
@@ -46,16 +46,23 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.3119477217981!2d23.84995811274285!3d37.953745681472626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1974ee1b0fba9%3A0xafb617a5a3b14cbc!2zzqTOlc6nzp3Omc6azp8gzpPOoc6RzqbOlc6Zzp8gzpzOkc6hzpnOkc6jIM6UzpHOks6RzqHOlw!5e0!3m2!1sel!2sgr!4v1763974436432!5m2!1sel!2sgr"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade" name="map-iframe"
+                        title="Τοποθεσία γραφείου στο χάρτη"></iframe>
                 </section>
             </article>
             <article class="contact-form">
                 <form action="mailto:eiraloupi2@gmail.com" method="post" enctype="multipart/form-data">
-                    <p><strong>Επικοινωνήστε μαζί μας</strong></p>
-                    <input class="form-element" type="text" placeholder="Όνομα" required>
-                    <input class="form-element" type="email" placeholder="Email" required>
-                    <textarea rows="9" class="form-element" placeholder="Το μήνυμα σας..." required></textarea>
-                    <button class="form-element button" type="submit">ΑΠΟΣΤΟΛΗ</button>
+                    <legend><strong>Επικοινωνήστε μαζί μας</strong></legend>
+                    <label for="name">Όνομα</label>
+                    <input aria-label="name field" id="name" class="form-element" type="text"
+                        placeholder="Το ονοματεπώνυμο σας..." required>
+                    <label for="email">Email</label>
+                    <input aria-label="email field" id="email" class="form-element" type="email"
+                        placeholder="Το email σας..." required>
+                    <label for="message">Το μήνυμα σας</label>
+                    <textarea aria-label="message field" id="message" rows="9" class="form-element"
+                        placeholder="Το μήνυμα σας..." required></textarea>
+                    <button class="form-element button" name="send email" type="submit">ΑΠΟΣΤΟΛΗ</button>
                 </form>
             </article>
         </section>

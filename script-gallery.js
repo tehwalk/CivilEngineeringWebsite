@@ -41,7 +41,7 @@ function load_images() {
         var element = works[parseInt(item.dataset.number)];
         var image = item.children[0]; ///make sure the first chlid element of the div is the image!!!
         image.src = element.images[0];
-        var overlay_text = item.querySelector('.show-image-overlay p');
+        var overlay_text = item.querySelector('.show-image-overlay h2');
         item.style.cursor = 'pointer';
         overlay_text.innerHTML = element.title;
         item.onclick = function () {
