@@ -3,20 +3,25 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Υπηρεσίες - Τεχνικό Γραφείο Μαρίας Δάβαρη</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-medium.css">
     <link rel="stylesheet" href="style-small.css">
+    <script src="script-hamburger-menu.js"></script>
 </head>
 
 <body>
     <header>
         <div class="navbar top-nav">
+            <div class="hamburger" onclick="openHamModal()">
+                <img src="images/more_6015685.png">
+            </div>
             <div class="logo-container">
-                <img src="images/ce_logo.png" id="logo" />
+                <img src="images/ce_logo.png" id="logo" alt="Τεχνικό Γραφείο Μαρίας Δάβαρη" />
                 <!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
             </div>
-            <nav>
+            <nav class="nav-row-container">
                 <ul>
                     <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
                     <li><a href="work-gallery.html">ΕΡΓΑ</a></li>
@@ -24,6 +29,26 @@
                     <li><a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
                 </ul>
             </nav>
+        </div>
+        <!--This will appear only on mobile screens-->
+        <div class="navbar" id="column-nav" role="navigation">
+            <div class="nav-column-container">
+                <div class="logo-container">
+                    <img src="images/ce_logo.png" id="logo" alt="Τεχνικό Γραφείο Μαρίας Δάβαρη" />
+                    <!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                        <li><a href="work-gallery.html">ΕΡΓΑ</a></li>
+                        <li><a href="services.html">ΥΠΗΡΕΣΙΕΣ</a></li>
+                        <li><a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="close-column-nav" onclick="closeHamModal()">
+                <p>X</p>
+            </button>
         </div>
     </header>
     <main>
@@ -77,22 +102,31 @@
     <footer>
         <section class="footer-info-section">
             <div class="logo-container">
-                <img src="images/ce_logo.png" id="logo" />
+                <img src="images/ce_logo.png" id="logo" alt="Τεχνικό Γραφείο Μαρίας Δάβαρη" />
                 <!-- <p>ΤΕΧΝΙΚΟ ΓΡΑΦΕΙΟ ΜΑΡΙΑΣ ΔΑΒΑΡΗ</p> -->
             </div>
             <section class="footer-useful-links">
-                <article class="footer-cd">
-                    <p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>
-                    <p>ΤΗΛ. 2106020833</p>
-                    <p>mdav2404@gmail.com</p>
+                <article class="footer-cd" aria-label="Στοιχεία επικοινωνίας">
+                    <div aria-label="Διεύθυνση γραφείου">
+                        <img src="images/icons/Location icon (white).png" alt="Εικονίδιο διεύθυνσης">
+                        <p>ΔΗΜ. Ι. ΧΟΥΝΤΑ 27, ΠΑΙΑΝΙΑ, 19002</p>
+                    </div>
+                    <div aria-label="Τηλέφωνο γραφείου">
+                        <img src="images/icons/Phone icon2 (white).png" alt="Εικονίδιο τηλεφώνου">
+                        <p>2106020833</p>
+                    </div>
+                    <div aria-label="Email γραφείου">
+                        <img src="images/icons/Mail icon2 (white).png" alt="Εικονίδιο email">
+                        <p>mdav2404@gmail.com</p>
+                    </div>
                 </article>
-                <article class="navbar footer">
+                <article class="navbar footer" aria-label="Χρήσιμοι σύνδεσμοι">
                     <nav>
                         <ul>
-                            <li><a class="secondary-text" href="">ΑΡΧΙΚΗ</a></li>
-                            <li><a class="secondary-text" href="">ΕΡΓΑ</a></li>
-                            <li><a class="secondary-text" href="">ΥΠΗΡΕΣΙΕΣ</a></li>
-                            <li><a class="secondary-text" href="">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                            <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                            <li><a href="work-gallery.html">ΕΡΓΑ</a></li>
+                            <li><a href="services.html">ΥΠΗΡΕΣΙΕΣ</a></li>
+                            <li><a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
                         </ul>
                     </nav>
                 </article>
@@ -106,7 +140,7 @@
 				</article> -->
             </section>
         </section>
-        <p id="copyright">Copyright 2025 - All rights reserved</p>
+        <p id="copyright" aria-label="Copyright">Copyright 2025 - All rights reserved</p>
     </footer>
 </body>
 
