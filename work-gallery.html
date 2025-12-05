@@ -65,6 +65,8 @@
             </button>
         </section>
         <div id="imageModal" class="modal">
+            <!--Only for mobile interaction-->
+            <div class="carousel-touch-surface"></div>
             <div class="modal-content">
                 <button class="close-modal" onclick="closeModal()">
                     <p>X</p>
@@ -74,7 +76,9 @@
                     <button class="carousel-control left" aria-label="Previous" data-direction="start">
                         <img src="images/carousel-arrow.svg">
                     </button>
-                    <img id="carousel-image" src="images/jpg" alt="Building Image" aria-label="Image carousel">
+                    <div class="carousel-image-container">
+                        <img id="carousel-image" src="images/jpg" alt="Building Image" aria-label="Image carousel">
+                    </div>
                     <button class="carousel-control right" aria-label="Next" data-direction="end">
                         <img src="images/carousel-arrow.svg">
                     </button>

@@ -611,15 +611,15 @@ textarea {
 	align-content: center;
 }
 
+.carousel-touch-surface{
+	height: 100%;
+	width: 100%;
+}
+
 .close-modal {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	padding: 1%;
-	right: 105px;
-	top: 0px;
+	padding: 2%;
+	align-self: flex-end;
+	margin-right: 20%;
 	color: var(--secondary-text-color);
 	border: 0;
 	background-color: transparent;
@@ -633,18 +633,22 @@ textarea {
 }
 
 .modal-content {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left:0;
+	transform: translate(10%, 50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	color: var(--secondary-text-color);
 }
 
 .carousel {
 	display: grid;
-	/* align-items: center;
-	align-content: center;
-	justify-content: center;
-	gap: 3%; */
-	grid-template-columns: 25% 50% 25%;
+	grid-template-columns: minmax(100px, 25%) minmax(300px, 50%) minmax(100px, 25%);
+	overflow-y: visible;
 }
 
 .carousel-control {
@@ -654,6 +658,13 @@ textarea {
 	align-self: center;
 	padding: 3%;
 	border-radius: 25px;
+}
+
+.carousel-image-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
 .carousel-control img {

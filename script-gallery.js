@@ -60,6 +60,7 @@ function openModal(number) {
     const work_title = document.getElementById('work-title');
     const buttonPrevious = document.querySelector('.carousel-control.left');
     const buttonNext = document.querySelector('.carousel-control.right');
+    const carousel_touch = document.querySelector('.carousel-touch-surface');
     active_element = works[parseInt(number)];
     work_title.innerHTML = active_element.title;
     //reset carousel index
@@ -70,15 +71,13 @@ function openModal(number) {
     updateCarousel();
 
     buttonPrevious.addEventListener('click', (e) => {
-        
         handleButtons(false);
-        isDragging = false;
+        //isDragging = false;
     });
 
     buttonNext.addEventListener('click', (e) => {
-        
         handleButtons(true);
-        isDragging = false;
+        //isDragging = false;
 
     });
 
@@ -90,33 +89,37 @@ function openModal(number) {
             handleButtons(true);
         }
     });
-    //FIXME: Buttons get pressed twice when on touchscreen, why?
 
-    imageModal.addEventListener('touchstart', (e) => {
+    carousel_touch.addEventListener('touchstart', (e) => {
+        //if (e.target.classList.contains("carousel-control") || e.target.classList.contains("close-modal")) return;
         startX = e.touches[0].clientX;
-        isDragging = true;
+        //isDragging = true;
     });
 
-    imageModal.addEventListener('touchmove', (e) => {
-        if (isDragging) endX = e.touches[0].clientX;
+    carousel_touch.addEventListener('touchmove', (e) => {
+        //if (e.target.classList.contains("carousel-control") || e.target.classList.contains("close-modal")) return;
+        //if (isDragging) 
+        endX = e.touches[0].clientX;
     });
 
-    imageModal.addEventListener('touchend', (e) => {
-        if (isDragging) {
-            handleSwipe(e);
+    carousel_touch.addEventListener('touchend', (e) => {
+        //if (e.target.classList.contains("carousel-control") || e.target.classList.contains("close-modal")) return;
+        handleSwipe(e);
+        /*if (isDragging) {
+           
             isDragging = false;
-        }
+        }*/
     });
 }
 
 function handleSwipe(e) {
     const swipeThreshold = 200;
-
+    console.log("swiped");
     if (Math.abs(endX - startX) > swipeThreshold) {
         if (endX < startX) {
-            handleButtons(true);
-        } else {
             handleButtons(false);
+        } else {
+            handleButtons(true);
         }
         updateCarousel();
     }
