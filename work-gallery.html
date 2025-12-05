@@ -67,23 +67,26 @@
         <div id="imageModal" class="modal">
             <!--Only for mobile interaction-->
             <div class="carousel-touch-surface"></div>
-            <div class="modal-content">
-                <button class="close-modal" onclick="closeModal()">
-                    <p>X</p>
-                </button>
-                <p id="image-index">Εικόνα 6/9</p>
-                <div class="carousel" role="region" aria-label="Image carousel">
-                    <button class="carousel-control left" aria-label="Previous" data-direction="start">
-                        <img src="images/carousel-arrow.svg">
+            <!--FIXME:Properly center carousel!-->
+            <div class="content-container">
+                <div class="modal-content">
+                    <button class="close-modal" onclick="closeModal()">
+                        <p>X</p>
                     </button>
-                    <div class="carousel-image-container">
-                        <img id="carousel-image" src="images/jpg" alt="Building Image" aria-label="Image carousel">
+                    <p id="image-index">Εικόνα 6/9</p>
+                    <div class="carousel" role="region" aria-label="Image carousel">
+                        <button class="carousel-control left" aria-label="Previous" data-direction="start">
+                            <img src="images/carousel-arrow.svg">
+                        </button>
+                        <div class="carousel-image-container">
+                            <img id="carousel-image" src="images/jpg" alt="Building Image" aria-label="Image carousel">
+                        </div>
+                        <button class="carousel-control right" aria-label="Next" data-direction="end">
+                            <img src="images/carousel-arrow.svg">
+                        </button>
                     </div>
-                    <button class="carousel-control right" aria-label="Next" data-direction="end">
-                        <img src="images/carousel-arrow.svg">
-                    </button>
+                    <h2 id="work-title">placeholder text</h2>
                 </div>
-                <h2 id="work-title">placeholder text</h2>
             </div>
         </div>
     </main>

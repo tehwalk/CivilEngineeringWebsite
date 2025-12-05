@@ -1,5 +1,6 @@
 
 function openModal() {
+    document.getElementById('column-nav').style.animation = "overlay-diag 1s";
     document.getElementById('column-nav').style.display = 'block';
 }
 

@@ -51,36 +51,27 @@ function load_images() {
             openModal(item.dataset.number);
         };
     }
-
+    hookupEvents();
 }
 
-function openModal(number) {
-    const imageModal = document.getElementById('imageModal');
-    imageModal.style.display = 'block';
-    const work_title = document.getElementById('work-title');
+function hookupEvents() {
     const buttonPrevious = document.querySelector('.carousel-control.left');
     const buttonNext = document.querySelector('.carousel-control.right');
     const carousel_touch = document.querySelector('.carousel-touch-surface');
-    active_element = works[parseInt(number)];
-    work_title.innerHTML = active_element.title;
-    //reset carousel index
-    currentIndex = 0;
-    //reset touch variables
-    startX = 0;
-    endX = 0;
-    updateCarousel();
-
+    ///button events
     buttonPrevious.addEventListener('click', (e) => {
+        console.log("button previous pressed!")
         handleButtons(false);
         //isDragging = false;
     });
 
     buttonNext.addEventListener('click', (e) => {
+        console.log("button next pressed!")
         handleButtons(true);
         //isDragging = false;
 
     });
-
+    ///arrow key events
     document.addEventListener('keydown', (e) => {
         if (e.code === 'ArrowLeft') {
             handleButtons(false);
@@ -89,7 +80,7 @@ function openModal(number) {
             handleButtons(true);
         }
     });
-
+    ///touch events
     carousel_touch.addEventListener('touchstart', (e) => {
         //if (e.target.classList.contains("carousel-control") || e.target.classList.contains("close-modal")) return;
         startX = e.touches[0].clientX;
@@ -105,11 +96,22 @@ function openModal(number) {
     carousel_touch.addEventListener('touchend', (e) => {
         //if (e.target.classList.contains("carousel-control") || e.target.classList.contains("close-modal")) return;
         handleSwipe(e);
-        /*if (isDragging) {
-           
-            isDragging = false;
-        }*/
     });
+}
+
+function openModal(number) {
+    const imageModal = document.getElementById('imageModal');
+    imageModal.style.display = 'block';
+    imageModal.style.animation = "overlay-diag 1s";
+    const work_title = document.getElementById('work-title');
+    active_element = works[parseInt(number)];
+    work_title.innerHTML = active_element.title;
+    //reset carousel index
+    currentIndex = 0;
+    //reset touch variables
+    resetTouch();
+    updateCarousel();
+
 }
 
 function handleSwipe(e) {
@@ -121,15 +123,18 @@ function handleSwipe(e) {
         } else {
             handleButtons(true);
         }
+        resetTouch();
         updateCarousel();
     }
 }
 
 function handleButtons(forward) {
     if (forward == true) {
+        console.log("forward!");
         currentIndex = (currentIndex + 1) % active_element.images.length;
     }
     else {
+        console.log("back!");
         currentIndex = (currentIndex - 1 + active_element.images.length) % active_element.images.length;
     }
     updateCarousel();
@@ -145,9 +150,16 @@ function updateCarousel() {
 }
 
 function closeModal() {
+    resetTouch();
     active_element = null;
+    //document.getElementById('imageModal').style.animation = "overlay-diag-rev 0.5s"
     document.getElementById('imageModal').style.display = 'none';
     //document.removeEventListener('keydown');
+}
+
+function resetTouch() {
+    startX = 0;
+    endX = 0;
 }
 
 document.addEventListener('DOMContentLoaded', load_images)
