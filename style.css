@@ -354,18 +354,31 @@ footer a {
 /*#region Banner Stuff*/
 
 .banner {
-	position: relative;
 	overflow-y: hidden;
-	max-height: 200px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+}
+
+.banner#works{
+	background-image: url("images/works-banner.png");
+}
+
+.banner#services{
+	background-image: url("images/services-banner.jpg");
+}
+
+.banner#contact{
+	background-image: url("images/contact-banner.png");
 }
 
 .banner h1 {
 	color: var(--secondary-text-color);
-	position: absolute;
 	text-align: center;
-	top: 40%;
-	left: 50%;
-	margin-left: -5%;
 }
 
 .banner img {
