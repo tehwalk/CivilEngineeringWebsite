@@ -674,7 +674,7 @@ textarea {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--dark-secondary-color-semi-transparent);
+	background-color: var(--dark-primary-color-semi-transparent);
 	overflow-y: auto;
 	align-content: center;
 }
@@ -719,12 +719,16 @@ textarea {
 	justify-content: center;
 	text-align: center;
 	color: var(--secondary-text-color);
+	gap: 10%;
+	width: 100%;
 }
 
 .carousel {
+	align-self: center;
 	display: grid;
-	grid-template-columns: minmax(100px, 25%) minmax(300px, 50%) minmax(100px, 25%);
-	overflow-y: visible;
+	grid-template-columns: minmax(60px, 25%) minmax(250px, 50%) minmax(60px, 25%);
+	overflow-x: visible;
+	
 }
 
 .carousel-control {
@@ -740,7 +744,8 @@ textarea {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
+	height: fit-content;
+	width: fit-content;
 }
 
 .carousel-control img {
@@ -749,7 +754,7 @@ textarea {
 }
 
 .carousel-control.left {
-	justify-self: end;
+	justify-self: start;
 }
 
 .carousel-control.left img {
@@ -758,13 +763,38 @@ textarea {
 }
 
 .carousel-control.right {
-	justify-self: start;
+	justify-self: end;
 }
 
 
 #carousel-image {
 	justify-self: center;
 	max-width: 700px;
+}
+
+.carousel-previews-container{
+	margin-top: 2%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1%;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.carousel-previews-container a {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  background: transparent;
+  border: 3px solid;
+  border-color: var(--secondary-text-color);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
 }
 
 

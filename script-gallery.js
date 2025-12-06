@@ -110,8 +110,25 @@ function openModal(number) {
     currentIndex = 0;
     //reset touch variables
     resetTouch();
-    updateCarousel();
+    addCarouselDots(active_element.images.length);
+}
 
+function addCarouselDots(element_number) {
+    console.log("dots!");
+    const previews_container = document.querySelector(".carousel-previews-container");
+    for (let i = 0; i < element_number; i++) {
+        let button = document.createElement("a");
+        button.href = "#";
+        button.addEventListener('click', (e) => goToImage(i));
+        previews_container.appendChild(button);
+    }
+    updateCarousel();
+}
+
+function goToImage(index) {
+    console.log(index);
+    currentIndex = index;
+    updateCarousel();
 }
 
 function handleSwipe(e) {
@@ -145,6 +162,15 @@ function updateCarousel() {
     const image_index = document.getElementById('image-index');
     image.src = active_element.images[currentIndex];
     image_index.innerHTML = "Εικόνα " + (currentIndex + 1).toString() + "/" + active_element.images.length.toString();
+    const previews_container = document.querySelector(".carousel-previews-container");
+    for (var i = 0; i < previews_container.children.length; i++) {
+        if (i == currentIndex) {
+            previews_container.children[i].style.backgroundColor = 'var(--secondary-text-color)';
+        }
+        else {
+            previews_container.children[i].style.backgroundColor = 'transparent';
+        }
+    }
     startX = 0;
     endX = 0;
 }
@@ -152,9 +178,15 @@ function updateCarousel() {
 function closeModal() {
     resetTouch();
     active_element = null;
+    removeCarouselDots();
     //document.getElementById('imageModal').style.animation = "overlay-diag-rev 0.5s"
     document.getElementById('imageModal').style.display = 'none';
     //document.removeEventListener('keydown');
+}
+
+function removeCarouselDots() {
+    const previews_container = document.querySelector('.carousel-previews-container');
+    previews_container.textContent = " ";
 }
 
 function resetTouch() {
