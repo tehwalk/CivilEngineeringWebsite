@@ -1,4 +1,4 @@
-@media screen and (min-width:1000px) and (max-width:1500px) {
+@media screen and (max-width:1200px) {
 
 	/*#region Navigation Stuff*/
 	.navbar {
@@ -11,7 +11,7 @@
 	}
 
 	.logo-container {
-		margin-left: 5%;
+		margin-left: 1%;
 		display: flex;
 		flex-direction: row;
 	}
@@ -47,6 +47,7 @@
 		flex-flow: row;
 		gap: 5%;
 		margin-bottom: 2%;
+		margin-right: 3%;
 	}
 
 	/*#endregion*/
@@ -58,4 +59,27 @@
 	}
 	
 	/*#endregion*/
+
+	/*#region Contact Page Stuff*/
+
+	.contact-area {
+		flex-direction: column;
+	}
+
+	/*#endregion*/
+
+}
+
+@media screen and (max-width:1280px) {
+		.navbar{
+		gap: 16%;
+	}
+
+	.nav-row-container ul{
+		gap: 16%;
+	} 
+
+	.navbar.footer ul{
+		gap: 24%;
+	}
 }

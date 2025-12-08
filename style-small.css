@@ -16,6 +16,8 @@
 
 	.logo-container {
 		margin-left: 0;
+		margin-top: 2%;
+		margin-bottom: 2%;
 		align-self: center;
 	}
 
@@ -161,6 +163,7 @@
 		flex-direction: column;
 		gap: 11%;
 		margin-bottom: 2%;
+		margin-right: 0;
 	}
 
 	/*#endregion*/
@@ -197,13 +200,7 @@
 
 	/*#endregion*/
 
-	/*#region Contact Page Stuff*/
-
-	.contact-area {
-		flex-direction: column;
-	}
-
-	/*#endregion*/
+	
 
 	.content-container{
 		overflow: clip;
