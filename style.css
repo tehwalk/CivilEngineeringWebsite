@@ -56,7 +56,8 @@ button {
 	cursor: pointer;
 }
 
-nav ul {
+ul {
+	padding-left: 0;
 	list-style-type: none;
 }
 
@@ -326,11 +327,12 @@ footer a {
 	align-items: center;
 	justify-content: center;
 	flex-flow: row;
-	gap: 11%;
+	gap: 7%;
 	margin-bottom: 2%;
 }
 
-.footer-cd div {
+
+.footer-cd li {
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
@@ -340,7 +342,7 @@ footer a {
 	width: max-content;
 }
 
-.footer-cd div img {
+.footer-cd li img {
 	width: 30px;
 	height: 30px;
 }

@@ -62,6 +62,8 @@
 
 	.hamburger {
 		display: block;
+		background-color: transparent;
+		border: 0;
 		margin-left: 2%;
 	}
 

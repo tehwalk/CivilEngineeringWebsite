@@ -2,31 +2,98 @@ const works = [
     {
         id: 0,
         title: "Ανακαίνιση εξοχικού στο Παλαιό Φάληρο",
-        images: ["images/istockphoto-939281438-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+        images: [
+            {
+                src: "images/istockphoto-939281438-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Αριστερή όψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            }
+        ]
 
     },
     {
         id: 1,
         title: "Ανέγερση διπλοκατοικίας στον Αγ. Ανδρέα Παιανίας",
-        images: ["images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+        images: [
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Πρόσοψη διπλοκατοικίας"
+            },
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Αριστερή όψη διπλοκατοικίας"
+            },
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            }
+        ]
 
     },
     {
         id: 2,
         title: "Ανέγερση διπλοκατοικίας στην Ηλιούπολη",
-        images: ["images/istockphoto-2175973016-612x612.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+        images: [
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Αριστερή όψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            }
+        ]
+        
 
     },
     {
         id: 3,
         title: "Ανακαίνιση μονοκατοικίας στην Κηφισιά",
-        images: ["images/pexels-expect-best-79873-323780.jpg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+         images: [
+            {
+                src: "images/pexels-expect-best-79873-323780.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Αριστερή όψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            }
+        ]
+        
 
     },
     {
         id: 4,
         title: "Επέκταση μονοκατοικίας στο Κορωπί",
-        images: ["images/pexels-photo-6422939.jpeg", "images/istockphoto-1312027174-612x612.jpg", "images/istockphoto-2175973016-612x612.jpg"]
+        images: [
+            {
+                src: "images/pexels-photo-6422939.jpeg",
+                alt: "Πρόσοψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-1312027174-612x612.jpg",
+                alt: "Αριστερή όψη εξοχικού"
+            },
+            {
+                src: "images/istockphoto-2175973016-612x612.jpg",
+                alt: "Πρόσοψη εξοχικού"
+            }
+        ]
 
     }
 ];
@@ -43,10 +110,12 @@ function load_images() {
     for (const item of gallery_items) {
         var element = works[parseInt(item.dataset.number)];
         var image = item.children[0]; ///make sure the first chlid element of the div is the image!!!
-        image.src = element.images[0];
+        image.src = element.images[0].src;
+        image.alt = element.images[0].alt;
         var overlay_text = item.querySelector('.show-image-overlay h2');
         item.style.cursor = 'pointer';
         overlay_text.innerHTML = element.title;
+        item.setAttribute("aria-label", element.title);
         item.onclick = function () {
             openModal(item.dataset.number);
         };
@@ -160,7 +229,8 @@ function handleButtons(forward) {
 function updateCarousel() {
     const image = document.getElementById('carousel-image');
     const image_index = document.getElementById('image-index');
-    image.src = active_element.images[currentIndex];
+    image.src = active_element.images[currentIndex].src;
+    image.alt = active_element.images[currentIndex].alt;
     image_index.innerHTML = "Εικόνα " + (currentIndex + 1).toString() + "/" + active_element.images.length.toString();
     const previews_container = document.querySelector(".carousel-previews-container");
     for (var i = 0; i < previews_container.children.length; i++) {
