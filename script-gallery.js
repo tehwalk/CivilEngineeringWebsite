@@ -202,7 +202,7 @@ function goToImage(index) {
 }
 
 function handleSwipe(e) {
-    const swipeThreshold = 200;
+    const swipeThreshold = 100;
     console.log("swiped");
     if (Math.abs(endX - startX) > swipeThreshold) {
         if (endX < startX) {
