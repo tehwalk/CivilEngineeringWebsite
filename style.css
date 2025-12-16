@@ -92,6 +92,7 @@ nav ul li a:hover::after {
 
 .noscroll{
 	overflow: hidden;
+	touch-action: none;
 }
 
 /*#endregion*/
@@ -701,6 +702,7 @@ textarea {
 .carousel-touch-surface {
 	height: 100%;
 	width: 100%;
+	z-index: 1;
 }
 
 .content-container {
@@ -712,6 +714,7 @@ textarea {
 	top: 0%;
 	width: 100%;
 	transform: translate(-50%, 0);
+	overscroll-behavior: contain;
 	/*pointer-events: none;*/
 }
 
@@ -741,6 +744,7 @@ textarea {
 	color: var(--secondary-text-color);
 	gap: 10%;
 	width: 100%;
+	z-index: 0;
 }
 
 .carousel {
