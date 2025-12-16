@@ -54,13 +54,13 @@ const works = [
                 alt: "Πρόσοψη εξοχικού"
             }
         ]
-        
+
 
     },
     {
         id: 3,
         title: "Ανακαίνιση μονοκατοικίας στην Κηφισιά",
-         images: [
+        images: [
             {
                 src: "images/pexels-expect-best-79873-323780.jpg",
                 alt: "Πρόσοψη εξοχικού"
@@ -74,7 +74,7 @@ const works = [
                 alt: "Πρόσοψη εξοχικού"
             }
         ]
-        
+
 
     },
     {
@@ -169,6 +169,7 @@ function hookupEvents() {
 }
 
 function openModal(number) {
+    document.querySelector("body").classList.add("noscroll");
     const imageModal = document.getElementById('imageModal');
     imageModal.style.display = 'block';
     imageModal.style.animation = "overlay-diag 1s";
@@ -251,6 +252,7 @@ function closeModal() {
     removeCarouselDots();
     //document.getElementById('imageModal').style.animation = "overlay-diag-rev 0.5s"
     document.getElementById('imageModal').style.display = 'none';
+    document.querySelector("body").classList.toggle("noscroll");
     //document.removeEventListener('keydown');
 }
 
